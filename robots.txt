@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nikhil12327.github.io/Portfolio/sitemap.xml
+

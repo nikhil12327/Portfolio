@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="neonBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#neonBg)"/>
+
+  <!-- Wet Asphalt Ground with Neon Reflections -->
+  <line x1="0" y1="360" x2="800" y2="360" stroke="#1e293b" stroke-width="1"/>
+  
+  <!-- Neon Signs Above -->
+  <rect x="180" y="100" width="140" height="45" rx="6" fill="#030712" stroke="#06b6d4" stroke-width="2" filter="drop-shadow(0 0 12px #06b6d4)"/>
+  <text x="250" y="128" fill="#67e8f9" font-family="'Inter', sans-serif" font-size="14" font-weight="700" text-anchor="middle">CYBER 24</text>
+
+  <rect x="480" y="80" width="160" height="50" rx="6" fill="#030712" stroke="#ec4899" stroke-width="2" filter="drop-shadow(0 0 12px #ec4899)"/>
+  <text x="560" y="112" fill="#f472b6" font-family="'Inter', sans-serif" font-size="14" font-weight="700" text-anchor="middle">NOCTURNE</text>
+
+  <!-- Ground Reflections (Vertical Wavy Streaks) -->
+  <path d="M 220 370 Q 210 440, 230 520 Q 215 570, 225 600" stroke="#06b6d4" stroke-width="4" fill="none" opacity="0.4" filter="blur(3px)"/>
+  <path d="M 270 370 Q 290 450, 260 530 Q 280 580, 270 600" stroke="#06b6d4" stroke-width="6" fill="none" opacity="0.3" filter="blur(4px)"/>
+
+  <path d="M 520 370 Q 540 430, 510 510 Q 535 560, 520 600" stroke="#ec4899" stroke-width="5" fill="none" opacity="0.4" filter="blur(3px)"/>
+  <path d="M 590 370 Q 570 460, 600 540 Q 580 580, 590 600" stroke="#ec4899" stroke-width="7" fill="none" opacity="0.3" filter="blur(5px)"/>
+
+  <!-- Pedestrian with Umbrella Silhouette -->
+  <g transform="translate(390, 310)">
+    <path d="M -45 0 C -45 -35, 45 -35, 45 0 Z" fill="#020617"/>
+    <circle cx="0" cy="15" r="8" fill="#020617"/>
+    <path d="M -12 25 L 12 25 L 10 95 L -10 95 Z" fill="#020617"/>
+  </g>
+
+  <!-- Editorial Info -->
+  <rect x="25" y="25" width="750" height="550" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="45" y="55" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="11">NOCTURNAL NEON REFLECTIONS</text>
+  <text x="45" y="555" fill="#67e8f9" font-family="'JetBrains Mono', monospace" font-size="11">35MM • F/1.4 • 1/125S • ISO 800 • LOW-LIGHT STREET STUDY</text>
+</svg>
+

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cvBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="cyberGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#cvBg)"/>
+
+  <!-- Matrix / Coordinate Grid -->
+  <g opacity="0.12" stroke="#10b981" stroke-width="1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none"/>
+      <path d="M 40 0 L 0 0 0 40"/>
+    </pattern>
+    <rect width="800" height="450" fill="url(#grid)"/>
+  </g>
+
+  <!-- Computer Vision Viewport -->
+  <rect x="60" y="45" width="680" height="360" rx="12" fill="#090d16" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- HUD Frame Corners -->
+  <path d="M 60 75 L 60 45 L 90 45" fill="none" stroke="#10b981" stroke-width="3"/>
+  <path d="M 740 75 L 740 45 L 710 45" fill="none" stroke="#10b981" stroke-width="3"/>
+  <path d="M 60 375 L 60 405 L 90 405" fill="none" stroke="#10b981" stroke-width="3"/>
+  <path d="M 740 375 L 740 405 L 710 405" fill="none" stroke="#10b981" stroke-width="3"/>
+
+  <!-- Top Metadata Bar -->
+  <text x="85" y="75" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">OPENCV 4.8 • CLUSTERING &amp; CONTOUR SEGMENTATION</text>
+  <text x="650" y="75" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">FPS: 60.0 | RES: 1920x1080</text>
+
+  <!-- Split View: Original vs Segmented Mask -->
+  <!-- Left Side: Raw Color Image Silhouette -->
+  <g transform="translate(100, 110)">
+    <rect width="260" height="230" rx="8" fill="#111827" stroke="#334155" stroke-width="1"/>
+    <text x="15" y="25" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">RAW RGB INPUT (HSV SPATIAL)</text>
+    
+    <!-- Object 1 -->
+    <ellipse cx="90" cy="110" rx="45" ry="55" fill="#3b82f6" opacity="0.8"/>
+    <!-- Object 2 -->
+    <rect x="140" y="80" width="80" height="90" rx="10" fill="#f59e0b" opacity="0.8"/>
+    <!-- Object 3 -->
+    <circle cx="175" cy="180" r="30" fill="#ec4899" opacity="0.8"/>
+  </g>
+
+  <!-- Middle Arrow / Pipeline Indicator -->
+  <g transform="translate(385, 210)">
+    <circle cx="15" cy="15" r="22" fill="#1e1b4b" stroke="#6366f1" stroke-width="2"/>
+    <path d="M 8 15 L 22 15 M 16 9 L 22 15 L 16 21" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="15" y="52" fill="#818cf8" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">K-MEANS</text>
+  </g>
+
+  <!-- Right Side: Segmented Contours & Bounding Boxes -->
+  <g transform="translate(440, 110)">
+    <rect width="260" height="230" rx="8" fill="#060911" stroke="#10b981" stroke-width="1"/>
+    <text x="15" y="25" fill="#10b981" font-family="'Inter', sans-serif" font-size="11" font-weight="600">SEGMENTED FEATURE MASKS</text>
+
+    <!-- Detected Object 1 with Bounding Box & Centroid -->
+    <rect x="35" y="45" width="105" height="120" fill="none" stroke="#10b981" stroke-dasharray="4,4" stroke-width="1.5"/>
+    <ellipse cx="88" cy="105" rx="42" ry="50" fill="none" stroke="#34d399" stroke-width="2"/>
+    <circle cx="88" cy="105" r="3" fill="#10b981"/>
+    <rect x="35" y="45" width="85" height="16" fill="#10b981"/>
+    <text x="40" y="56" fill="#022c22" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700">CLUSTER 1 (98.4%)</text>
+
+    <!-- Detected Object 2 with Bounding Box -->
+    <rect x="135" y="70" width="95" height="110" fill="none" stroke="#06b6d4" stroke-dasharray="4,4" stroke-width="1.5"/>
+    <rect x="145" y="80" width="75" height="85" rx="8" fill="none" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="182" cy="122" r="3" fill="#06b6d4"/>
+    <rect x="135" y="70" width="85" height="16" fill="#06b6d4"/>
+    <text x="140" y="81" fill="#082f49" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700">CLUSTER 2 (96.1%)</text>
+  </g>
+
+  <!-- Terminal Bottom Info -->
+  <rect x="100" y="355" width="600" height="34" rx="6" fill="#030712" stroke="#1e293b" stroke-width="1"/>
+  <text x="115" y="376" fill="#a7f3d0" font-family="'JetBrains Mono', monospace" font-size="10">cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE) → 3 Segments Identified</text>
+</svg>
+

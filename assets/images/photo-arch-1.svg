@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bwGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="50%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#27272a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bwGrad)"/>
+
+  <!-- Minimalist High-End Architecture Lines -->
+  <!-- Diagonal Glass Facade -->
+  <polygon points="100,450 400,0 700,450" fill="#09090b" stroke="#71717a" stroke-width="1.5"/>
+  <polygon points="250,450 400,0 550,450" fill="#18181b" stroke="#a1a1aa" stroke-width="1"/>
+  
+  <line x1="400" y1="0" x2="400" y2="450" stroke="#f4f4f5" stroke-width="2"/>
+
+  <!-- Horizontal Floor Bands -->
+  <line x1="330" y1="100" x2="470" y2="100" stroke="#52525b" stroke-width="1"/>
+  <line x1="280" y1="180" x2="520" y2="180" stroke="#52525b" stroke-width="1"/>
+  <line x1="220" y1="260" x2="580" y2="260" stroke="#52525b" stroke-width="1"/>
+  <line x1="160" y1="350" x2="640" y2="350" stroke="#52525b" stroke-width="1"/>
+
+  <!-- Film Metadata Overlay -->
+  <rect x="25" y="25" width="750" height="400" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="45" y="55" fill="#f4f4f5" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1">ARCHITECTURAL SYMMETRY // MONOCHROME STUDY</text>
+  <text x="45" y="405" fill="#a1a1aa" font-family="'JetBrains Mono', monospace" font-size="11">28MM • F/8.0 • 1/250S • ISO 200 • HIGH DYNAMIC RANGE</text>
+</svg>
+

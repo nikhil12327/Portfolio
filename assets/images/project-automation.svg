@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="autoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="n8nGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#autoBg)"/>
+
+  <!-- Node Orchestration Canvas Window -->
+  <rect x="50" y="40" width="700" height="370" rx="14" fill="#0b0f19" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Top Bar -->
+  <path d="M 50 54 Q 50 40 64 40 L 736 40 Q 750 40 750 54 L 750 85 L 50 85 Z" fill="#1e293b"/>
+  <circle cx="78" cy="62" r="5" fill="#ef4444"/>
+  <circle cx="95" cy="62" r="5" fill="#f59e0b"/>
+  <circle cx="112" cy="62" r="5" fill="#10b981"/>
+  <text x="140" y="66" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="12" font-weight="600">n8n Event-Driven Automation Pipeline • Live Execution Flow</text>
+  <rect x="610" y="52" width="120" height="22" rx="11" fill="#431407" stroke="#ea580c" stroke-width="1"/>
+  <text x="670" y="67" fill="#fb923c" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" text-anchor="middle">ACTIVE (200 OK)</text>
+
+  <!-- Flow Connector Lines -->
+  <path d="M 200 200 C 240 200, 260 150, 300 150" fill="none" stroke="#f97316" stroke-width="3" stroke-dasharray="6,4"/>
+  <path d="M 200 200 C 240 200, 260 260, 300 260" fill="none" stroke="#3b82f6" stroke-width="3"/>
+  <path d="M 440 150 C 480 150, 500 200, 540 200" fill="none" stroke="#10b981" stroke-width="3"/>
+  <path d="M 440 260 C 480 260, 500 200, 540 200" fill="none" stroke="#10b981" stroke-width="3"/>
+  <path d="M 680 200 L 720 200" fill="none" stroke="#a855f7" stroke-width="3"/>
+
+  <!-- Node 1: Webhook Trigger -->
+  <g transform="translate(80, 160)">
+    <rect width="120" height="80" rx="10" fill="#1e293b" stroke="#ea580c" stroke-width="2"/>
+    <circle cx="25" cy="25" r="10" fill="#ea580c"/>
+    <text x="45" y="29" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="11" font-weight="700">Webhook</text>
+    <text x="15" y="55" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">POST /v1/event</text>
+    <circle cx="120" cy="40" r="5" fill="#f97316"/>
+  </g>
+
+  <!-- Node 2A: Python Data Transform -->
+  <g transform="translate(300, 110)">
+    <rect width="140" height="80" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <circle cx="25" cy="25" r="10" fill="#3b82f6"/>
+    <text x="45" y="29" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="11" font-weight="700">Python Parser</text>
+    <text x="15" y="55" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">Schema Validation</text>
+    <circle cx="0" cy="40" r="5" fill="#f97316"/>
+    <circle cx="140" cy="40" r="5" fill="#10b981"/>
+  </g>
+
+  <!-- Node 2B: Conditional Filter -->
+  <g transform="translate(300, 220)">
+    <rect width="140" height="80" rx="10" fill="#1e293b" stroke="#eab308" stroke-width="2"/>
+    <circle cx="25" cy="25" r="10" fill="#eab308"/>
+    <text x="45" y="29" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="11" font-weight="700">Router / If</text>
+    <text x="15" y="55" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">Priority &gt;= Level 2</text>
+    <circle cx="0" cy="40" r="5" fill="#3b82f6"/>
+    <circle cx="140" cy="40" r="5" fill="#10b981"/>
+  </g>
+
+  <!-- Node 3: Database & Multi-Channel Dispatch -->
+  <g transform="translate(540, 160)">
+    <rect width="140" height="80" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <circle cx="25" cy="25" r="10" fill="#10b981"/>
+    <text x="45" y="29" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="11" font-weight="700">DB &amp; Dispatch</text>
+    <text x="15" y="55" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">MySQL + Webhooks</text>
+    <circle cx="0" cy="40" r="5" fill="#10b981"/>
+    <circle cx="140" cy="40" r="5" fill="#a855f7"/>
+  </g>
+
+  <!-- Execution Console -->
+  <rect x="80" y="325" width="600" height="60" rx="6" fill="#030712" stroke="#1e293b" stroke-width="1"/>
+  <text x="95" y="348" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="10">⚡ [2025-09-02 02:24:01] Workflow execution #8402 SUCCESS (Duration: 34ms)</text>
+  <text x="95" y="368" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">Payload transformed 48 keys → Dispatched to 3 endpoints with 0 errors.</text>
+</svg>
+

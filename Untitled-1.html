@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikhil | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+    header h1 { font-size: 24px; font-weight: 600; }
+    nav a {
+      margin-left: 25px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    nav a:hover { opacity: 1; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 120px;
+    }
+    .hero h2 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero p { color: #cbd5f5; margin-bottom: 30px; }
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #6366f1;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+
+    section { margin-bottom: 120px; }
+    section h3 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .about p { max-width: 800px; color: #cbd5f5; }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .skill-card {
+      background: #111827;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .project-card {
+      background: #111827;
+      padding: 25px;
+      border-radius: 14px;
+    }
+    .project-card h4 { margin-bottom: 10px; }
+    .project-card p { color: #cbd5f5; font-size: 14px; }
+
+    footer {
+      text-align: center;
+      opacity: 0.6;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero h2 { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Nikhil</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h2>AI & CS Student<br/>Building Practical Solutions</h2>
+        <p>Computer Science student passionate about AI, ML, automation, and clean problem-solving through simple, efficient code.</p>
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h3>About Me</h3>
+      <p>
+        I’m a Computer Science and Engineering student with a strong interest in Artificial Intelligence, Machine Learning, and automation. I enjoy building structured, real-world projects and exploring how AI tools can enhance productivity. Alongside technical skills, I’m also passionate about photography, videography, and creative editing.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h3>Skills</h3>
+      <div class="skills">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">MySQL</div>
+        <div class="skill-card">AI & ML Basics</div>
+        <div class="skill-card">Computer Vision</div>
+        <div class="skill-card">Automation (n8n)</div>
+        <div class="skill-card">Video Editing</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="projects">
+        <div class="project-card">
+          <h4>Hospital Management System</h4>
+          <p>Database-driven system with patient, doctor, billing, and consultation modules using MySQL and Java.</p>
+        </div>
+        <div class="project-card">
+          <h4>Text to Morse Code Converter</h4>
+          <p>Efficient text-to-morse conversion project focusing on clean logic and performance.</p>
+        </div>
+        <div class="project-card">
+          <h4>Image Segmentation Project</h4>
+          <p>Used computer vision and ML techniques for feature extraction and clustering.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3>Contact</h3>
+      <p>Email: your-email@example.com</p>
+      <p>LinkedIn | GitHub</p>
+    </section>
+
+    <footer>
+      © 2025 Nikhil. All rights reserved.
+    </footer>
+
+  </div>
+
+</body>
+</html>

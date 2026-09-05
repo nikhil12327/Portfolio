@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="morseBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="amberGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#morseBg)"/>
+
+  <!-- Oscilloscope / Telecommunication Display Frame -->
+  <rect x="50" y="40" width="700" height="370" rx="14" fill="#090d16" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Top Bar -->
+  <path d="M 50 54 Q 50 40 64 40 L 736 40 Q 750 40 750 54 L 750 85 L 50 85 Z" fill="#1e293b"/>
+  <circle cx="78" cy="62" r="5" fill="#ef4444"/>
+  <circle cx="95" cy="62" r="5" fill="#f59e0b"/>
+  <circle cx="112" cy="62" r="5" fill="#10b981"/>
+  <text x="140" y="66" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Morse Audio Synthesizer &amp; High-Frequency Decoder</text>
+  <rect x="610" y="52" width="120" height="22" rx="11" fill="#451a03" stroke="#f59e0b" stroke-width="1"/>
+  <text x="670" y="67" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" text-anchor="middle">ITU-R 750 Hz</text>
+
+  <!-- Oscilloscope Waveform Display -->
+  <rect x="80" y="105" width="640" height="150" rx="8" fill="#040711" stroke="#1e293b" stroke-width="1"/>
+  
+  <!-- Waveform Grid -->
+  <g opacity="0.1" stroke="#f59e0b" stroke-width="1">
+    <line x1="80" y1="180" x2="720" y2="180"/>
+    <line x1="200" y1="105" x2="200" y2="255"/>
+    <line x1="320" y1="105" x2="320" y2="255"/>
+    <line x1="440" y1="105" x2="440" y2="255"/>
+    <line x1="560" y1="105" x2="560" y2="255"/>
+    <line x1="680" y1="105" x2="680" y2="255"/>
+  </g>
+
+  <!-- Sine Wave Pulse Train (Dit Dit Dah Dit - F / Dit Dit - I) -->
+  <path d="M 100 180 
+           Q 110 140, 120 180 Q 130 220, 140 180
+           L 160 180
+           Q 170 140, 180 180 Q 190 220, 200 180
+           L 220 180
+           Q 235 130, 250 180 Q 265 230, 280 180 Q 295 130, 310 180 Q 325 230, 340 180
+           L 360 180
+           Q 370 140, 380 180 Q 390 220, 400 180
+           L 440 180
+           Q 450 140, 460 180 Q 470 220, 480 180
+           L 500 180
+           Q 510 140, 520 180 Q 530 220, 540 180
+           L 580 180
+           Q 595 130, 610 180 Q 625 230, 640 180 Q 655 130, 670 180 Q 685 230, 700 180" 
+        fill="none" stroke="#f59e0b" stroke-width="2.5" filter="drop-shadow(0 0 8px rgba(245,158,11,0.6))"/>
+
+  <!-- Audio Dit/Dah Visual Breakdown -->
+  <g transform="translate(80, 275)">
+    <!-- Text Box 1 -->
+    <rect width="305" height="110" rx="8" fill="#111827" stroke="#334155" stroke-width="1"/>
+    <text x="15" y="25" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">INPUT STRING (ENGLISH ASCII)</text>
+    <text x="15" y="58" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="700">"HELLO WORLD"</text>
+    <text x="15" y="90" fill="#10b981" font-family="'Inter', sans-serif" font-size="11">✓ UTF-8 Sanitized • Zero latency</text>
+
+    <!-- Text Box 2 -->
+    <rect x="335" width="305" height="110" rx="8" fill="#111827" stroke="#f59e0b" stroke-width="1"/>
+    <text x="350" y="25" fill="#fbbf24" font-family="'Inter', sans-serif" font-size="11" font-weight="600">ENCODED MORSE TELEGRAPH</text>
+    <text x="350" y="58" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="700">.... . .-.. .-.. --- / .-- --- .-.</text>
+    <text x="350" y="90" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Tone: 750Hz | Speed: 20 WPM</text>
+  </g>
+</svg>
+
