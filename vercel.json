@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "public": true,
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/js/"
+    },
+    {
+      "src": "/videos/(.*)",
+      "dest": "/videos/"
+    },
+    {
+      "src": "/style.css",
+      "dest": "/style.css"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt"
+    },
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml"
+    },
+    {
+      "src": "/nexum",
+      "dest": "/nexum.html"
+    },
+    {
+      "src": "/login",
+      "dest": "/login.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
